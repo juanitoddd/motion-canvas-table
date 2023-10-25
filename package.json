@@ -1,6 +1,6 @@
 {
   "name": "@juanddd/motion-canvas-table",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "",
   "scripts": {
     "prepare": "husky install",
