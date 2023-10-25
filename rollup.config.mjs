@@ -9,7 +9,7 @@ const config = [
     input: 'src/index.ts',
     output: {
       file: 'lib/index.min.js',
-      format: 'es',
+      format: 'es'      
     },
     plugins: [externals(), typescript(), terser()],
     external: [/^@motion-canvas\/core/, /^@motion-canvas\/2d/],

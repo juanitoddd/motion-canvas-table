@@ -1,5 +1,5 @@
 {
-  "name": "motion-canvas-component-library",
+  "name": "@cromasome/motion-canvas-table",
   "version": "0.0.0",
   "description": "",
   "scripts": {
@@ -47,6 +47,7 @@
     "rollup": "^3.29.4",
     "rollup-plugin-dts": "^6.0.2",
     "rollup-plugin-node-externals": "^6.1.2",
+    "tslib": "^2.6.2",
     "typescript": "^5.2.2",
     "vite": "^4.2.1",
     "vite-tsconfig-paths": "^4.2.1"
