@@ -1,5 +1,7 @@
 # Motion Canvas Table 
 
+![Motion Canvas Table](./assets/motion-canvas-table.png)
+
 ## Install library
 
 ```bash
