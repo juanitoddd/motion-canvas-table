@@ -1,4 +1,4 @@
-import { Layout, NodeProps, Rect, Shape, ShapeProps, Txt, Node, FlexContent, FlexItems } from '@motion-canvas/2d';
+import { Layout, NodeProps, Rect, Shape, ShapeProps, Txt, Node, FlexContent, FlexItems, Circle } from '@motion-canvas/2d';
 import { SignalValue, all, createRef, makeRef } from '@motion-canvas/core';
 
 export interface HeaderCell {
@@ -55,7 +55,7 @@ export class Table extends Shape {
 	public constructor(props: TableProps) {    
     super(props);    
     this.props = props    
-    this.cols = props.data.headers.map((header: HeaderCell) => props.data.rows.map((row: RowCell[]) => row.find((cell: RowCell) => cell.group === header.id)))    		    
+    this.cols = props.data.headers.map((header: HeaderCell) => props.data.rows.map((row: RowCell[]) => row.find((cell: RowCell) => cell.group === header.id)))    
     this.add(
 			<Rect
         ref={this.container}
@@ -99,15 +99,8 @@ export class Table extends Shape {
 					</Layout>
 				))}
 			</Rect>
-		);
-    
-	}
-
-  // TODO:
-  public render = () => {
-    this.container().add(<></>)
-  }
-
+		);    
+	}    
   
   public *addRow(row: RowCell[], duration: number) {    
     const cellRect: Rect[] = []

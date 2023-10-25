@@ -18,17 +18,28 @@ import {Table, TableData, TableStyle} from '@cromasome/motion-canvas-table';
 const table = createRef<Table>();
 
 const data: TableData = {
-  headers: [{ id:'name', label: 'Name'}, { id:'breed', label: 'Breed'}, { id:'age', label: 'Age'}],
-  rows: [
-    [{group: 'name', label: 'Fido'}, {group: 'breed', label: 'Labrador'}, {group: 'age', label: 3}],
-    [{group: 'name', label: 'Spot'}, {group: 'breed', label: 'Poodle'}, {group: 'age', label: 2}],
-    [{group: 'name', label: 'Rover'}, {group: 'breed', label: 'Retriever'}, {group: 'age', label: 4}],
-    [{
-      group: 'name',
-      label: <Latex tex="{\Huge\color{white} {y^2} = {x^3} + 7}"></Latex>
-    }]
-  ]
-};
+    headers: [
+      { id:'name', label: 'Name'}, 
+      { id:'color', label: 'Color'}, 
+      { id:'age', label: 'Age'}],
+    rows: [
+      [
+        {group: 'name', label: 'Milo'}, 
+        {group: 'color', label: <Circle width={100} height={100} fill="#2D8597"/>}, 
+        {group: 'age', label: 3}
+      ],
+      [
+        {group: 'name', label: 'Spot'}, 
+        {group: 'color', label: <Circle width={100} height={100} fill="#ECA0E6"/>}, 
+        {group: 'age', label: 2}
+      ],
+      [
+        {group: 'name', label: 'Rover'}, 
+        {group: 'color', label:<Circle width={100} height={100} fill="#CBB95B"/> }, 
+        {group: 'age', label: <Latex tex="{\Huge\color{white} {y^2} = {x^3} + 7}"></Latex>}
+      ],      
+    ]
+  };
 ```
 
 ### Table Style
@@ -63,7 +74,13 @@ view.add(
 ### Add Row
 
 ```ts
-yield* table().addRow([{ group: 'name', label: 'Roco'}, {group: 'breed', label: 'boxed'}, {group: 'age', label: 10 }], 0.5)
+yield* table().addRow(
+    [
+      { group: 'name', label: 'Aldi'}, 
+      {group: 'color', label: <Circle width={100} height={100} fill="#E16616"/>}, 
+      {group: 'age', label: 10 }
+    ], 0.5
+  )
 ```
 
 ### Remove Row
