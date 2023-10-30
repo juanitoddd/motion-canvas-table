@@ -39,7 +39,7 @@ export class Switch extends Node {
   private readonly indicator = createRef<Circle>();
   private readonly container = createRef<Rect>();
 
-  public constructor(props?: SwitchProps) {    
+  public constructor(props?: SwitchProps) {
     super({
       ...props,
     });
